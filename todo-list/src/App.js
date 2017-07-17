@@ -29,7 +29,7 @@ class App extends Component {
         <h1>我的代办</h1>
         <div class="inputWrapper">
           {/* <input type="text" value={this.state.newTodo} /> */}
-          <TodoInput content={this.state.newTodo} />
+          <TodoInput content={this.state.newTodo} onSubmit={this.addTodo} />
         </div>
         <ol>
           {todos}
@@ -37,6 +37,9 @@ class App extends Component {
       </div>
       
     )
+  }
+  addTodo(){
+    console.log("我要添加一个todo");
   }
 }
 
