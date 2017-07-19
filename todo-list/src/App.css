@@ -8,4 +8,9 @@
   min-height: 20em;
   min-width: 32em;
   box-shadow: 0 0 1em hsla(0,0%,0%,0.15);
+}.App > .todoList > li:nth_child(odd){
+background: #eee;
+}
+.App > .todoList > li:nth-child(event){
+  background: transparent;
 }
