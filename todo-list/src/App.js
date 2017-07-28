@@ -6,8 +6,12 @@ import 'normalize.css';
 import './reset.css';
 
 class App extends Component { 
+
+  //初始化props和state;
   constructor(props){
+    //App新构造的函数参数为props
     super(props)
+    //调用父对象react.component的参数props
     this.state = {
       newTodo: '',
       todoList: [
@@ -16,8 +20,9 @@ class App extends Component {
       ]
     }
   }
-  render() {
 
+  //将render中return的内容插入到页面上；
+  render() {
     let todos = this.state.todoList.filter((item)=> !item.deleted)
     .map((item,index)=>{
         return (
@@ -27,8 +32,6 @@ class App extends Component {
         </li>
       )
     })
-
-    // console.log(todos)
     return (
       <div className="App">
         <h1>我的代办</h1>
@@ -45,6 +48,9 @@ class App extends Component {
       
     )
   }
+
+
+
   // addTodo(){
   //   console.log("我要添加一个todo");
   // }
